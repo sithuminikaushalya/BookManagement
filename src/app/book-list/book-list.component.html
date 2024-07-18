@@ -1,5 +1,5 @@
 <h2>Book List</h2>
-<table class="book-table">
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -16,8 +16,8 @@
       <td>{{ book.isbn }}</td>
       <td>{{ book.publicationDate }}</td>
       <td>
-        <button (click)="deleteBook(book.id)">Delete</button>
-        <button (click)="editBook(book.id)">Edit</button>
+        <button class="btn btn-danger" (click)="deleteBook(book.id)">Delete</button>
+        <button class="btn btn-primary" (click)="editBook(book.id)">Edit</button>
       </td>
     </tr>
   </tbody>

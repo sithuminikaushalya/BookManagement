@@ -1,20 +1,26 @@
-<h2>{{ isEdit ? 'Edit Book' : 'Add Book' }}</h2>
-<form (ngSubmit)="saveBook()" class="book-form">
-  <div>
-    <label for="title">Title</label>
-    <input type="text" id="title" [(ngModel)]="book.title" name="title" required>
+<div class="card">
+  <div class="card-header">
+    <h2>{{ isEdit ? 'Edit Book' : 'Add Book' }}</h2>
   </div>
-  <div>
-    <label for="author">Author</label>
-    <input type="text" id="author" [(ngModel)]="book.author" name="author" required>
+  <div class="card-body">
+    <form (ngSubmit)="saveBook()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" [(ngModel)]="book.title" name="title" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" [(ngModel)]="book.author" name="author" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" id="isbn" [(ngModel)]="book.isbn" name="isbn" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="publicationDate">Publication Date</label>
+        <input type="date" id="publicationDate" [(ngModel)]="book.publicationDate" name="publicationDate" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success">{{ isEdit ? 'Update' : 'Add' }} Book</button>
+    </form>
   </div>
-  <div>
-    <label for="isbn">ISBN</label>
-    <input type="text" id="isbn" [(ngModel)]="book.isbn" name="isbn" required>
-  </div>
-  <div>
-    <label for="publicationDate">Publication Date</label>
-    <input type="date" id="publicationDate" [(ngModel)]="book.publicationDate" name="publicationDate" required>
-  </div>
-  <button type="submit">{{ isEdit ? 'Update' : 'Add' }} Book</button>
-</form>
+</div>
