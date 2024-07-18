@@ -1,0 +1,33 @@
+.book-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .book-form div {
+    margin-bottom: 12px;
+  }
+  
+  .book-form label {
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .book-form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .book-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .book-form button:hover {
+    background-color: #45a049;
+  }
+  
